@@ -85,7 +85,7 @@ jobs:
 
           # Get the current hour in JST to determine punch type
           CURRENT_HOUR=$(date -u "+%H" -d "+9 hours")
-          if [ "$CURRENT_HOUR" = "09" ]; then
+          if [ "$CURRENT_HOUR" -ge 8 ] && [ "$CURRENT_HOUR" -lt 9 ]; then
             TYPE=11 # 出勤
             STAMPED_AT="$(date -u "+%Y/%m/%d 09:00:00" -d "+9 hours")"
           elif [ "$CURRENT_HOUR" = "18" ]; then
