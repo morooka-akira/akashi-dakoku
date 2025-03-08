@@ -1,12 +1,12 @@
 name: Automated Attendance Punching
 
 on:
-  schedule:
+  #schedule:
     # 8:30 出勤打刻 (月曜日から金曜日のみ)
     # JSTベースで実行するため-9h。 actionsのスケジュールは結構遅れるため、8:30にしている
-    - cron: "30 23 * * 0-4"
+  #  - cron: "30 23 * * 0-4"
     # 18:00 退勤打刻 (月曜日から金曜日のみ)
-    - cron: "30 9 * * 1-5"
+  #  - cron: "30 9 * * 1-5"
   workflow_dispatch:
 
 jobs:
